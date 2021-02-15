@@ -2,11 +2,9 @@ package hamming
 
 import (
 	"errors"
-	"strings"
 )
 
 func Distance(a, b string) (int, error) {
-
 	if a == b {
 		return 0, nil
 	}
@@ -15,11 +13,9 @@ func Distance(a, b string) (int, error) {
 	}
 
 	diffCount := 0
-	aString := strings.Split(a, "")
-	bString := strings.Split(b, "")
 
-	for i, x := range aString {
-		if x != bString[i] {
+	for i, x := range a {
+		if byte(x) != byte(b[i]) {
 			diffCount++
 		}
 	}
