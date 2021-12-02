@@ -1,0 +1,38 @@
+name: TrunkIO
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branch: main
+  workflow_dispatch: # allow to manually start the workflow
+
+# push:                                          # (disabled) run on push, be carefull with this setting
+# as the workflow should only be triggered at a rate lower than
+# 4 times a hour to keep traffic on aoc site low
+jobs:
+  # equivalent to batch changes. stop prior workflows if still running to run the latest only
+  cancel-runs:
+    name: CancelAnyCurrentRunning
+    runs-on: ubuntu-latest
+    if: github.repository == 'sheldonhull/algorithmswithgo.com' # Prevent forks from running this to be nice
+    steps:
+      - uses: n1hility/cancel-previous-runs@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+  trunk:
+    name: TrunkLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Caching is only needed when using ephemeral CI runners
+      - name: Cache Linters/Formatters
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/trunk
+          key: trunk-${{ runner.os }}
+      # >>> Install your own deps here (npm install, etc) <<<
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v0.3.0-beta

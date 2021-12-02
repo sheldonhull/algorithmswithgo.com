@@ -36,7 +36,7 @@ func TestCalcIncreaseEvents(t *testing.T) {
 	})
 	t.Run("adventinput", func(t *testing.T) {
 		is := iz.New(t)
-		inputs := helpers.ReadInputs(t, adventYear, adventDay, puzzleNumber)
+		inputs := helpers.ReadInputs(t, adventYear, adventDay)
 		got := advent.CalcIncreaseEvents(inputs)
 		want := 1692
 		is.Equal(got, want) // should match
