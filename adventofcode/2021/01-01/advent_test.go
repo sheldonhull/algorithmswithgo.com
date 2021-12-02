@@ -3,7 +3,7 @@ package advent_test
 import (
 	"testing"
 
-	advent "algo/adventofcode/2021/01"
+	advent "algo/adventofcode/2021/01-01"
 	helpers "algo/adventofcode/testhelpers"
 
 	iz "github.com/matryer/is"
