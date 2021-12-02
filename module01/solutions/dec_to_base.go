@@ -22,7 +22,7 @@ func DecToBase(dec, base int) string {
 	return res
 }
 
-// DecToBaseAlt is an alternative solution to DecToBase
+// DecToBaseAlt is an alternative solution to DecToBase.
 func DecToBaseAlt(dec, base int) string {
 	const charset = "0123456789ABCDEF"
 	// strings.Builder is more efficient than using strings

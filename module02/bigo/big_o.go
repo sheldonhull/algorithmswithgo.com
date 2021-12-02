@@ -31,7 +31,7 @@ func SumToMaxV2(max int) int {
 	return (max * (max + 1)) / 2
 }
 
-// SumVals is O(N) where N is the size of the vals slice. ie N == len(vals).
+// SumVals is O(N) where N is the size of the vals slice. Ie N == len(vals).
 func SumVals(vals []int) int {
 	var sum int
 	for _, val := range vals {
@@ -67,7 +67,7 @@ func Grid(x, y int) string {
 	return sb.String()
 }
 
-// PrintList has a big O of O(N*M) where N == value of n, and M == len(word)
+// PrintList has a big O of O(N*M) where N == value of n, and M == len(word).
 func PrintList(word string, n int) {
 	for i := 0; i < n; i++ {
 		for _, val := range word {
@@ -77,7 +77,7 @@ func PrintList(word string, n int) {
 	}
 }
 
-// Cube is O(N^3)
+// Cube is O(N^3).
 func Cube(n int) string {
 	var sb strings.Builder
 	for x := 0; x < n; x++ {

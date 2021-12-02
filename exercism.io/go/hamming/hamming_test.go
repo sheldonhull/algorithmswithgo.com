@@ -24,7 +24,6 @@ func TestHamming(t *testing.T) {
 				t.Fatalf("Distance(%q, %q) = %d, want %d.",
 					tc.s1, tc.s2, got, tc.want)
 			}
-
 		}
 	}
 }

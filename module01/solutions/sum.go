@@ -1,7 +1,7 @@
 package module01solutions
 
 // Sum will sum up all of the numbers passed
-// in and return the result
+// in and return the result.
 func Sum(numbers []int) int {
 	res := 0
 	for _, val := range numbers {

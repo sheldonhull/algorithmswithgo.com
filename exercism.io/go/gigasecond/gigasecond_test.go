@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// date formats used in test data
+// date formats used in test data.
 const (
 	fmtD  = "2006-01-02"
 	fmtDT = "2006-01-02T15:04:05"
