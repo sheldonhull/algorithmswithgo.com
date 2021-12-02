@@ -19,7 +19,7 @@ jobs:
       - uses: n1hility/cancel-previous-runs@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: .adventofcode.yml
+          # workflow: .adventofcode.yml # only applies to scheduled and gives a warning anyway
   update:
     name: UpdateAdventBadges
     runs-on: ubuntu-latest
