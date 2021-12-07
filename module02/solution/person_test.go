@@ -9,7 +9,7 @@ import (
 // last name then first name.
 func testPeople(t *testing.T, sortFn func([]Person)) {
 	for name, list := range map[string][]Person{
-		"sorted": []Person{
+		"sorted": {
 			{12, "Billy", "Tables"},
 			{12, "Bobby", "Tables"},
 			{12, "Jordan", "Tables"},
@@ -21,7 +21,7 @@ func testPeople(t *testing.T, sortFn func([]Person)) {
 			{71, "Thomas", "Train"},
 			{53, "Percy", "Engine"},
 		},
-		"reverse": []Person{
+		"reverse": {
 			{71, "Thomas", "Train"},
 			{65, "Harry", "Hippo"},
 			{53, "Percy", "Engine"},
@@ -33,7 +33,7 @@ func testPeople(t *testing.T, sortFn func([]Person)) {
 			{12, "Bobby", "Tables"},
 			{12, "Billy", "Tables"},
 		},
-		"duplicates": []Person{
+		"duplicates": {
 			{53, "Percy", "Engine"},
 			{45, "Johnny", "Testuser"},
 			{12, "Billy", "Tables"},

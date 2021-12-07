@@ -15,10 +15,10 @@ func TestString(t *testing.T, sortFn func([]string)) {
 	rand.Seed(seed)
 
 	for name, list := range map[string][]string{
-		"sorted":     []string{"apple", "banana", "cat", "dog"},
-		"reverse":    []string{"dog", "cat", "ball", "alphabet"},
-		"duplicates": []string{"alphabet", "ball", "cat", "alphabet", "ball", "cat"},
-		"similar":    []string{"apple", "app", "alligator", "all", "all-in", "alphabet", "apoplexy", "apology", "apologize"},
+		"sorted":     {"apple", "banana", "cat", "dog"},
+		"reverse":    {"dog", "cat", "ball", "alphabet"},
+		"duplicates": {"alphabet", "ball", "cat", "alphabet", "ball", "cat"},
+		"similar":    {"apple", "app", "alligator", "all", "all-in", "alphabet", "apoplexy", "apology", "apologize"},
 		"random-1000-20": func() []string {
 			alphabet := "abcdefghijklmnopqrstuvwxyz"
 			var list []string
