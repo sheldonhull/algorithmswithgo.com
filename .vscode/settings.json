@@ -12,5 +12,13 @@
         "chore",
         "revert",
         "exercism.io"
-    ]
+    ],
+    "go.editorContextMenuCommands": {
+        "testFile": true,
+        "testPackage": true,
+        "generateTestForFile": true,
+        "generateTestForPackage": true
+    },
+    "go.disableConcurrentTests": true,
+    "go.testOnSave": true
 }

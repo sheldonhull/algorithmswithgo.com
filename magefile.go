@@ -21,7 +21,7 @@ package main
 import (
 
 	// mage:import
-	_ "algo.local/.tasks"
+	_ "algo.local/mage"
 
 	// mage:import
 	_ "github.com/sheldonhull/magetools/gotools" // gotools provides Go tasks such as linting and testing
