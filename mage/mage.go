@@ -1,5 +1,3 @@
-//go:build mage
-
 // This magefile provides a template to get started quickly using the helpers.
 // You can drop this into an existing project instead of the default mage --init generated one to quickly get going.
 // You'll still have to run: `go mod tidy` to get the dependencies sorted out.
